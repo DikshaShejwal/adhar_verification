@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Aadhaar Verify (Demo)</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width:600px; margin:40px auto; padding:20px; }
+    input, button { padding:10px; margin:6px 0; width:100%; box-sizing:border-box; }
+    .hidden { display:none; }
+    .msg { padding:8px; margin:8px 0; border-radius:6px; }
+    .error { background:#ffe6e6; border:1px solid #ffb3b3; }
+    .ok { background:#e6ffe6; border:1px solid #b3ffb3; }
+  </style>
+</head>
+<body>
+  <h2>Aadhaar Verification (Demo)</h2>
+
+  <div id="step1">
+    <label>Upload Aadhaar image (front/back)</label>
+    <input type="file" id="aadhaarImage" accept="image/*" />
+    <label>Enter Aadhaar number (12 digits)</label>
+    <input type="text" id="aadhaarNumber" placeholder="1234 5678 9012 or 123456789012" />
+    <label>Phone (optional)</label>
+    <input type="text" id="phone" placeholder="Phone to receive OTP (simulated)" />
+    <button id="sendOtp">Send OTP</button>
+    <div id="resp" class="msg hidden"></div>
+  </div>
+
+  <div id="step2" class="hidden">
+    <label>Enter OTP</label>
+    <input type="text" id="otpInput" placeholder="6-digit OTP" />
+    <button id="confirmOtp">Confirm OTP</button>
+    <div id="resp2" class="msg hidden"></div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
